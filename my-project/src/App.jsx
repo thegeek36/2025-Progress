@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Sun, Moon, Share2, Clock, Calendar, Heart } from 'lucide-react';
-
+import { Analytics } from "@vercel/analytics/react"
 const getProgressColor = (progress) => {
   if (progress <= 35) return 'bg-gradient-to-r from-green-400 to-green-500';
   if (progress <= 65) return 'bg-gradient-to-r from-yellow-300 to-yellow-400';
@@ -103,6 +103,7 @@ function App() {
           >
             <Share2 className="w-5 h-5" />
           </button>
+          <Analytics />
           <button
             onClick={() => setDarkMode(!darkMode)}
             className="bg-white/10 text-white p-2 rounded-full hover:bg-white/20 transition-colors"
